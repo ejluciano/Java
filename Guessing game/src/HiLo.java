@@ -8,11 +8,11 @@ public class HiLo {
         //do-while loop
         do {
             //Generates random number
-            int theNumber = (int)(Math.random() * 100 + 1);
-            //System.out.println(theNumber); // Use only for debugging
+            int theNumber = (int)(Math.random() * 200 - 100);
+            System.out.println(theNumber); // Use only for debugging
             int guess = 0;
             while (guess != theNumber){
-                System.out.println("Guess a number between 1 and 100: ");
+                System.out.println("Guess a number between -100 and 100: ");
                 guess = scan.nextInt();
                 //nested loop
                 if (guess < theNumber) 
@@ -20,7 +20,7 @@ public class HiLo {
                 else if (guess > theNumber)
                      System.out.println(guess + " is to high. Try again.");
                 else
-                    System.out.println(guess + " is correct. You win!");
+                    System.out.println(guess + " is correct. You win! \n it took you " + " to get it correct.");
             }
             System.out.println("Would you like to play again (y/n)?");
             playAgain = scan.next();
